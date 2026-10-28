@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { AlertTriangle, CheckCircle2, CreditCard, Heart, KeyRound, Megaphone } from 'lucide-react';
 import { open } from '@tauri-apps/plugin-shell';
@@ -15,8 +15,8 @@ export function SupporterSettingsSection() {
   const [busy, setBusy] = useState(false);
   const [recoveryCode, setRecoveryCode] = useState('');
   const [newRecoveryCode, setNewRecoveryCode] = useState('');
-  const termsUrl = status.terms_url ?? 'https://github.com/caamer20/Telegram-Drive/blob/main/SUPPORTER_TERMS.md';
-  const supportUrl = 'https://github.com/caamer20/Telegram-Drive/issues/new/choose';
+  const termsUrl = status.terms_url ?? '#';
+  const supportUrl = '#';
   const canPurchase = shouldOfferNewSupporterPurchase(status) && !status.checkout_pending;
   const canRefresh = ['active', 'needs_refresh', 'expired'].includes(status.state);
   const canRestore = !status.ad_free && !['loading', 'unavailable', 'revoked'].includes(status.state);
